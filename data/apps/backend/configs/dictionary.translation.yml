@@ -1,52 +1,56 @@
-dictionary:
-  translations:
-    defaults:
-      fields:
-        name: Имя
-        surname: Фамилия
-        url: Часть URL
-        image: Картинка
-        metaTitle: Мета-название
-        metaDescription: Мета-описание
-        metaKeywords: Ключевые слова
-        isActive: Активен
-        weight: Вес
-        title: Заголовок
-        forward: Вступление
-        date: Дата
-        text: Текст
-        isDefault: По умолчанию
-        translation: Перевод
-        ctime: Cоздан
-        mtime: Изменён
-        keyword: Ключ
-        login: Логин
-        password: Пароль
-        email: E-mail
-        phone: Телефон
-        userId: Пользователь
-        techUrl: ~
-        netId: ~
+dictionary: 
+  translations: 
+    defaults: 
+      fields: 
+        name: РРјСЏ 
+        surname: Р¤Р°РјРёР»РёСЏ 
+        url: Р§Р°СЃС‚СЊ URL 
+        image: РљР°СЂС‚РёРЅРєР° 
+        metaTitle: РњРµС‚Р°-РЅР°Р·РІР°РЅРёРµ 
+        metaDescription: РњРµС‚Р°-РѕРїРёСЃР°РЅРёРµ 
+        metaKeywords: РљР»СЋС‡РµРІС‹Рµ СЃР»РѕРІР° 
+        isActive: РђРєС‚РёРІРµРЅ 
+        weight: Р’РµСЃ 
+        title: Р—Р°РіРѕР»РѕРІРѕРє 
+        forward: Р’СЃС‚СѓРїР»РµРЅРёРµ 
+        date: Р”Р°С‚Р° 
+        text: РўРµРєСЃС‚ 
+        isDefault: РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 
+        translation: РџРµСЂРµРІРѕРґ 
+        ctime: CРѕР·РґР°РЅ 
+        mtime: РР·РјРµРЅС‘РЅ 
+        keyword: РљР»СЋС‡ 
+        login: Р›РѕРіРёРЅ 
+        password: РџР°СЂРѕР»СЊ 
+        email: E-mail 
+        phone: РўРµР»РµС„РѕРЅ 
+        userId: РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ 
+        techUrl: ~ 
+        netId: ~ 
 
-      validators:
-        required: Это поле нужно заполнить
-        uniq: Это поле должно быть уникально
+      validators: 
+        required: Р­С‚Рѕ РїРѕР»Рµ РЅСѓР¶РЅРѕ Р·Р°РїРѕР»РЅРёС‚СЊ 
+        uniq: Р­С‚Рѕ РїРѕР»Рµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ СѓРЅРёРєР°Р»СЊРЅРѕ 
+        adminBundle\Form\FieldValidator\AdminPasswordCheck: ~ 
 
-    AdminBundle\Form\Auth\SignIn:
-      labels:
-        name: ~
-        submit: ~
+    AdminBundle\Form\Auth\SignIn: 
+      labels: 
+        name: ~ 
+        submit: ~ 
 
-      fields:
-        login: ~
-        password: ~
+      fields: 
+        login: ~ 
+        password: ~ 
 
-    User_Form:
-      fields:
-        netId: ~
-        name: ~
-        surname: ~
-        image: ~
-        email: ~
-        ctime: ~
-        mtime: ~
+      validators: 
+        adminBundle\Form\FieldValidator\AdminPasswordCheck: ~ 
+
+    User_Form: 
+      fields: 
+        netId: ~ 
+        name: ~ 
+        surname: ~ 
+        image: ~ 
+        email: ~ 
+        ctime: ~ 
+        mtime: ~ 

@@ -9,8 +9,7 @@ class Layout_Default extends fvLayout
 
         $this->addCSS([
             "/theme/bootstrap-3.3.5/css/bootstrap.min.css",
-            "/theme/bootstrap-3.3.5/css/carousel.css",
-            "/theme/sass/style.css"
+            "/theme/bootstrap-3.3.5/css/carousel.css"
         ]);
 
         $this->addJS([
