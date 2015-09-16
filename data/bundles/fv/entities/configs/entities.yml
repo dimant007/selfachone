@@ -1,0 +1,65 @@
+entities:
+
+  Admin:
+    implements: [ iRecord ]
+    table_name: admins
+    primary_key: id
+    fields:
+      login: { type: string, unique: true }
+      password: { type: string_password }
+      email: { type: string_email }
+      name: { type: string }
+      isActive: { type: bool, nullable: false }
+      role: { type: string_role, nullable: false }
+
+  User:
+      implements: [ iRecord, iActive ]
+      table_name: users
+      primary_key: id
+      fields:
+          netId: {type: int}
+          name: {type: string}
+          surname: {type: string}
+          image: {type: string}
+          email: {type: string_email }
+
+  StaticPage:
+    implements: [ iAdminRecord ]
+    table_name: staticPages
+    primary_key: id
+    fields:
+      techUrl: { type: string }
+      isSystem: { type: bool }
+      title: { type: string }
+      text: { type: rich }
+
+  Dictionary:
+    table_name: dictionary
+    primary_key: id
+    fields:
+      keyword: { type: string, unique: true }
+      translation: { type: string }
+
+  DictionaryLocaled:
+    table_name: dictionary
+    implements: [ Dictionary ]
+    fields:
+      translation: { language: true }
+
+  Language:
+    implements: [ iActive, iWeighted ]
+    table_name: languages
+    primary_key: id
+    fields:
+      name: {type: string,  editable: true, method: input,  name: Язык}
+      code: {type: string,  editable: true, method: input,  name: Код }
+      isDefault: {type: bool, validate: false, editable: true, method: checkbox, name: Стандартный}
+
+  SocialUser:
+      table_name: socialUsers
+      primary_key: id
+      foreigns:
+          user: { entity: User, key: userId, nullable: false }
+      fields:
+          netId: {type: string}
+          netUserId: {type: string}

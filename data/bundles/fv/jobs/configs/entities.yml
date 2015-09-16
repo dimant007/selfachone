@@ -1,0 +1,11 @@
+entities:
+
+  DelayedJob:
+    implements: [ iRecord ]
+    subclass_key: subclass
+    primary_key: id
+    fields:
+      data: { type: array }
+      retry: { type: int, default: 0 }
+      status: { type: int, default: 1 }
+      lastError: { type: text }

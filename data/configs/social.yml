@@ -1,0 +1,13 @@
+#social:
+#  facebook:
+#    applicationId: ~
+#    applicationSecret: ~
+#
+#  vkontakte:
+#    applicationId: ~
+#    applicationSecret: ~
+#
+#javascript:
+#  sections:
+#    include: [ social ]
+#    exclude: [ social.facebook.applicationSecret, social.vkontakte.applicationSecret ]

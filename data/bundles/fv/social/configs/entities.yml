@@ -1,0 +1,17 @@
+entities:
+  User:
+    constraints:
+      socials: { entity: User_Social }
+
+  User_Social:
+    table_name: socialUsers
+    subclass_key: subclass
+    foreigns:
+      user: { entity: User, nullable: true }
+    fields:
+        initiator: {type: bool}
+        netId: {type: string}
+        image: {type: string_image}
+        name: {type: string}
+        surname: {type: string}
+        email: {type: string}

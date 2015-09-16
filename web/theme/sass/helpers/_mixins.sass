@@ -1,0 +1,42 @@
+=retina
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5)
+    @content
+
+=font( $name, $file, $weight : normal, $style : normal )
+  $fileName: "#{$file}"
+
+  @font-face
+    font-family: quote($name)
+    src: font-url("#{$fileName}.eot")
+    src: font-url("#{$fileName}.eot?#iefix") format('embedded-opentype'), font-url("#{$fileName}.woff") format('woff'), font-url("#{$fileName}.ttf") format('truetype')
+    font-weight: $weight
+    font-style: $style
+
+=placeholder
+  ::-webkit-input-placeholder
+    @content
+
+  &:-moz-placeholder
+    @content
+
+  ::-moz-placeholder
+    @content
+
+  &:-ms-input-placeholder
+    @content
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=vendor( $prop, $value )
+  -webkit-#{$prop}: $value
+  -moz-#{$prop}: $value
+  -o-#{$prop}: $value
+  #{$prop}: $value

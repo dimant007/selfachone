@@ -1,0 +1,9 @@
+qModifier:
+  iActive:
+    where: <alias>.isActive = 1
+
+  iWeighted:
+    order: <alias>.weight
+
+  iTimeWeighted:
+    order: <alias>.weight, <alias>.ctime DESC

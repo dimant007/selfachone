@@ -1,0 +1,39 @@
+abstract:
+  iRecord:
+    fields:
+      ctime: { type: datetime_ctime }
+      mtime: { type: datetime_mtime }
+
+  iUser:
+    foreigns: 
+      user: { entity: User, type: user }
+
+  iAdmin:
+    foreigns:
+      creator: { entity: Admin, key: creatorId, type: creator, delete: noaction }
+      modifier: { entity: Admin, key: modifierId, type: modifier, delete: noaction }
+
+  iActive:
+    fields:
+      isActive: { type: bool, nullable: false, default: true }
+
+  iUserRecord:
+    implements: [ iRecord, iUser, iActive ]
+
+  iAdminRecord:
+    implements: [ iRecord, iAdmin, iActive ]
+
+  iWeighted:
+    fields:
+      weight: { type: int, default: 0 }
+
+  iTimeWeighted:
+    fields:
+      ctime: { type: datetime_ctime }
+      weight: { type: int, default: 0 }
+
+  iMeta:
+    fields:
+      title: { type: text }
+      description: { type: text }
+      keywords: { type: text }

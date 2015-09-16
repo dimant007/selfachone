@@ -1,0 +1,35 @@
+@import "compass/utilities/sprites"
+
+$icon : sprite-map("icon/*.png", $layout: smart)
+$icon2x : sprite-map("icon2x/*.png", $layout: smart)
+
+.icon
+  background-image: sprite-url($icon)
+  background-repeat: no-repeat
+  display: inline-block
+
+  +retina
+    $file : sprite-path( $icon )
+    background-image: sprite-url($icon2x)
+    background-size: image-width($file) image-height($file)
+
+=icon($name, $raw : false)
+  $file : sprite-file($icon, $name)
+  $width : image-width($file)
+  $height : image-height($file)
+
+  @if $raw
+    background-image: sprite-url($icon)
+    background-repeat: no-repeat
+    display: inline-block
+
+    +retina
+      $file : sprite-path( $icon )
+      background-image: sprite-url($icon2x)
+      background-size: image-width($file) image-height($file)
+  @else
+    @extend .icon
+
+  background-position: sprite-position($icon, $name)
+  width: $width
+  height: $height

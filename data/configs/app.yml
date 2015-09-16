@@ -1,0 +1,13 @@
+apps:
+  backend:
+    uri: /backend/
+    layout: default
+
+  frontend:
+    uri: /
+    layout: default
+
+debug: true
+
+session:
+  class: builtIn

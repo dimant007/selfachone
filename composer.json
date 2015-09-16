@@ -1,0 +1,24 @@
+{
+    "name": "fv/fv-skeleton",
+    "config": {
+        "target-php-version": "5.3",
+        "vendor-dir": "data/vendor"
+    },
+    "require": {
+          "twig/twig": "1.*"
+        , "intervention/image": "1.4.*"
+        , "phpmailer/phpmailer": "5.2.*"
+        , "fv/core": "1.5.*"
+        , "fv/admin-bundle": "1.*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@gitlab.fww.com.ua:fv/core.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@gitlab.fww.com.ua:fv/admin-bundle.git"
+        }
+    ]
+}

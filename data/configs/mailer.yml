@@ -1,0 +1,6 @@
+mailer:
+  port: 25
+  # smtp: false
+  # smtpAuth: false
+  # from: noreply@ks8test.grape.fww.com.ua
+  # fromName: Я робото

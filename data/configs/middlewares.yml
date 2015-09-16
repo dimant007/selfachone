@@ -1,0 +1,7 @@
+middleWares:
+  WithoutWww:
+  ExceptionHandler:
+  Assets:
+  PageNotFound:
+  AppSelector:
+  Router:
