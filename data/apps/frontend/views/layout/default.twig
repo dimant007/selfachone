@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>{{ title }} {% if title %}—{% endif %} {{"siteTitle"|translate}}</title>
+        <title>{{ title }} {% if title %}—{% endif %} {{"Selfach"|translate}}</title>
 
         {% for sheet in this.getCss() %}
             <link rel="stylesheet" href="{{ sheet.href }}" {% if sheet.media %}media="{{ sheet.media }}"{% endif %}/>
